@@ -1,35 +1,41 @@
 ## Magento 2 Vietnamese Language Pack
 
-Switching your store to Vietnamese according to **Magento 2 Vietnamese Language Pack** instruction. The transformation will cover both storefront and backend on Magento 2 store. It is time to focus on the localization language when there is any plan to enter the international market as Vietnam. This will help you eliminate the language barrier for the better commerce.
+Switching your store to Vietnamese according to **Magento 2 Vietnamese Language Pack** instruction. The transformation will cover both storefront and backend on Magento 2 store. It is time to focus on the local languages when there is any plan to enter the international market as Vietnam. This will help you eliminate the language barrier for the better commerce.
 
-The language package is contributed by the native Vienamese speakers from Magento 2 Translation Project, so the quality of the convertion is surely guanranteed. Then, you will donwload and install the zip file that compress all translated phrases into Vietnamese. 
+The language package is contributed by native Vienamese speakers from Magento 2 Translation Project, so the quality of the convertion is surely guanranteed. Then, you will donwload and install the zip file that compress all translated phrases into Vietnamese. 
 
 Read more [Magento 2 Vietnamese Language Pack](https://www.mageplaza.com/magento-2-vietnamese-language-pack.html)
 
+![Mageplaza Vietnamese language pack](https://i.imgur.com/qjWPj1W.png)
 
 ## Overview
 
-- Download & Contribute
-- Install Vietnamese Language Pack
-- How to Install Vietnamese Language Pack
+1. Language Package Process
+2. Install Vietnamese Language Pack
+3. How to active Vietnamese language pack
+4. How to contribute
+5. Supported Magento versions
+6. Notes
+7. Language package authors
 
-## Download & Contribute to Vietnamese Language Pack
+## 1. Language Package Process
 
-Below are two active buttons which are required operations before installing the language package. Let's hit them to download and contribute Magento 2 Vietnamese Language Pack immediately!
+This is status of Vietnamese Language Pack, you can see how many percentage of this project has been done.
 
-**Download packages**:
+![language pack](http://progressed.io/bar/81?title=translated)
 
-- [Download .zip](https://github.com/mageplaza/magento-2-vietnamese-language-pack/archive/master.zip)
-- [Download .tar.gz](https://github.com/mageplaza/magento-2-vietnamese-language-pack/tarball/master)
+It is not fully translated? Feel free to contribute:
+- [On Crowdin](https://crowdin.com/project/magento-2): It takes time to approve your contribution by Magento team.
+- [On Github](https://github.com/mageplaza/magento-2-vietnamese-language-pack/blob/master/HOW-TO-CONTRIBUTE.md): It's faster, our team will approve it after you send pull request.
 
 
-Find other [language packs here]({https://www.mageplaza.com/kb/magento-2-language-pack/)
+Find other [language packs here](https://www.mageplaza.com/kb/magento-2-language-pack/)
 
-## How to Install Vietnamese Language Pack
+## 2. How to Install Vietnamese Language Pack
 
 There are 3 different methods to install this language pack.
 
-### ✓ #1. Composer method (Recommend)
+### ✓ Method #1. Composer method (Recommend)
 Install the Vietnamese language pack via composer is never easier.
 
 **Install Vietnamese pack**:
@@ -37,6 +43,7 @@ Install the Vietnamese language pack via composer is never easier.
 ```
 composer require mageplaza/magento-2-vietnamese-language-pack:dev-master
 php bin/magento setup:static-content:deploy vi_VN
+php bin/magento indexer:reindex
 php bin/magento cache:clean
 php bin/magento cache:flush
 
@@ -54,14 +61,22 @@ php bin/magento cache:flush
 
 ```
 
-#### Authentication required (Optional)
+#### Authentication required (If any)
 
 ![Authentication required](https://cdn.mageplaza.com/media/general/dmryiPk.png)
 
 If you have not added this authentication, you can follow [this guide](http://devdocs.magento.com/guides/v2.0/install-gde/prereq/connect-auth.html)
 
+Or use these keys:
 
-### #2. Copy & Paste method (Not recommend)
+```
+Public Key: c7af1bfc9352e9c986637eec85ed53af
+Private Key: 17e1b72ea5f0b23e9dbfb1f68dc12b53
+```
+
+
+
+### ✓ Method #2. Copy & Paste method (Not recommended)
 
 This method suitable for non-technical people such as merchants. Just download the package then flush cache.
 
@@ -81,8 +96,11 @@ Unzip the Vietnamese language pack to Magento 2 root folder. In this guide, we e
 Your Magento 2 root folder can be: `/home/account_name/yourstore.com/public_html/`
 
 ```
-unzip fr.zip /var/www/html/
+unzip master.zip app/i18n/Mageplaza/
 ```
+
+Rename folder `magento-2-vietnamese-language-pack` to `vi_vn`.
+
 
 You also can unzip locally and upload them to Magento 2 root folder.
 
@@ -91,7 +109,7 @@ You also can unzip locally and upload them to Magento 2 root folder.
 Follow this guide to [Flush Cache on your Magento 2 store](https://www.mageplaza.com/kb/how-flush-enable-disable-cache.html)
 
 
-### #3. Download and install manually (Not recommend)
+### ✓ Method #3. Download and install manually (Not recommended)
 
 To download and install Vietnamese pack manually, you have to access to your server via FTP or SFTP.
 
@@ -102,171 +120,77 @@ To download and install Vietnamese pack manually, you have to access to your ser
 
 #### Step 1: Unzip and upload
 
-Unzip the compressed file and upload file `vi_VN.zip` into `app/i18n/mageplaza/vi_VN/vi_VN.csv`
+Unzip the compressed file and upload file `master.zip` into `app/i18n/Mageplaza/vi_vn/`
+
+See this screenshot:
+
+![Vietnamese pack](https://cdn3.mageplaza.com/media/general/language-pack.png)
+
+This language pack code is: **vi_vn**
 
 #### Step 2: Flush cache
 
 Follow this guide to [Flush Cache on your Magento 2 store](https://www.mageplaza.com/kb/how-flush-enable-disable-cache.html)
 
 
-## How to active Vietnamese language pack
+## 3. How to Active the Vietnamese language pack 
 
 Now time to active the Vietnamese language pack for your Magento 2 store. From Magento 2 admin panel, navigate to `Stores > Configuration > General > Locale Options`
 ![{{Magento 2 Vietnamese language pack}}](https://cdn.mageplaza.com/media/general/aPSUA0l.png)
 
 
-<!-- ## Translation process of Vietnamese Language Pack
-![process](http://progressed.io/bar/80) -->
+## 4. How to contribute
 
-Contribute to this language at https://crowdin.com/project/magento-2/vi
+Contribute to this language at :
+- [On Crowdin](https://crowdin.com/project/magento-2): It takes time to approve your contribution by Magento team.
+- [On Github](https://github.com/mageplaza/magento-2-vietnamese-language-pack/blob/master/HOW-TO-CONTRIBUTE.md): It's faster, our team will approve it after you send pull request.
 
-## Supported Magento versions
 
-- Magento v2.0.0
-- Magento v2.0.1
-- Magento v2.0.2
-- Magento v2.0.3
-- Magento v2.0.4
-- Magento v2.0.5
-- Magento v2.0.6
-- Magento v2.0.7
-- Magento v2.0.8
-- Magento v2.0.9
-- Magento v2.0.10
-- Magento v2.0.11
-- Magento v2.0.12
-- Magento v2.0.13
-- Magento v2.0.14
-- Magento v2.0.15
-- Magento v2.1.0
-- Magento v2.1.1
-- Magento v2.1.2
-- Magento v2.1.3
-- Magento v2.1.4
-- Magento v2.1.5
-- Magento v2.1.6
-- Magento v2.1.7
-- Magento v2.1.8
+## 5. Supported Magento versions
+
+It supports all Magento 2 versions include [Magento 2 open-source](https://www.mageplaza.com/download-magento/) (Community), Magento 2 Commerce (EE), Magento Cloud, Magento B2B, Magento MSI.
+
+
+- Magento v2.0.x
+- Magento v2.1.x
+- Magento v2.2.x
+- Magento v2.3.x
 
 
 
-## Language package authors
+## 6. Notes 
+
+- This project automatically updates weekly from Crowdin.
+- Any question, issue please [create a new issue](https://github.com/mageplaza/magento-2-vietnamese-language-pack/issues/new)
+
+## 7. Language package authors
 
 - [Magento official translations project for Magento 2](https://crowdin.com/project/magento-2)
+- Magento Community
 - Language packages built by [Mageplaza team](https://www.mageplaza.com/)
 
 
-## References:
+## 8. References 
 
 - https://www.mageplaza.com/magento-2-vietnamese-language-pack.html
-- https://www.mageplaza.com/kb/magento-2-language-pack/
 - https://crowdin.com/project/magento-2
-
-
-
-## SWEET MAGEPLAZA EXTENSIONS TO BRING YOU MORE MONEY
-
-### [✓ One Step Checkout](https://www.mageplaza.com/magento-2-one-step-checkout-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ ↑30% INCREASE CONVERSION RATE 
-
-☞ ↓66% DECREASE ABANDONMENT CART
-
-☞ ↓80% REDUCE CHECKOUT TIME
-
-### [✓ Layered Navigation](https://www.mageplaza.com/magento-2-layered-navigation-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ ↑84% USER'S FILTERING EXPERIENCE
-
-☞ ↑25% CONVERSION RATE
-
-☞ ↓67% SHOPPING TIME
-
-### [✓ Frequently Bought Together](https://www.mageplaza.com/magento-2-frequently-bought-together/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Amazon Product Recommendation Solution
- 
-☞ AJAX loading for better performance
-
-☞ Support Custom Options and all product types
-
-
-
-### [✓ Gift Card](https://www.mageplaza.com/magento-2-gift-card-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Physical, virtual or combined gift cards
- 
-☞ Different gift card values from prices
-
-☞ Send cards via email, SMS, post office or messenger
-
-
-### [✓ Who Bought This Also Bought](https://www.mageplaza.com/magento-2-who-bought-this-also-bought/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Display on Product Page, Category Page, Shopping Cart page
-
-☞ AJAX loading for better performance.
-
-☞ Flexible layout and design.
-
-
-### [✓ Social Login](https://www.mageplaza.com/magento-2-social-login-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Increase signup rate up-to 30%
-
-☞ Supports 11 Types: Facebook, Google Plus, Twitter, Linkedin, Instagram, Yahoo, Github, Foursquare, VK, Live, Amazon
-
-☞ Easy custom design fit with your store design
-
-☞ [Social Login on Github](https://github.com/mageplaza/magento-2-social-login)
-
-
-
-### [✓ Shop By Brand](https://www.mageplaza.com/magento-2-shop-by-brand/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Fully Compatible with Layered Navigation
-
-☞ Instant Search brands
-
-☞ Import brands
-
-
-
-
-### [✓ Affiliate](https://www.mageplaza.com/magento-2-affiliate-extension/?utm_source=github.com&utm_medium=link&utm_campaign=related-extension)
-
-☞ Multiple Affiliate Campaigns
-
-☞ Smart Referral Links
-
-☞ Affiliate Report
-
-
 
 
 
 ## Mageplaza extensions on Magento Marketplace, Github
 
 
-☞ [Magento 2 One Step Checkout extension](https://marketplace.magento.com/mageplaza-magento-2-one-step-checkout-extension.html)
-
-☞ [Magento 2 Blog extension](https://marketplace.magento.com/mageplaza-magento-2-blog-extension.html)
-
-☞ [Magento 2 Layered Navigation extension](https://marketplace.magento.com/mageplaza-layered-navigation-m2.html)
-
-☞ [Magento One Step Checkout](https://github.com/magento-2/one-step-checkout)
-
-☞ [Magento 2 Blog on Github](https://github.com/mageplaza/magento-2-blog)
-
-☞ [Magento 2 Social Login on Github](https://github.com/mageplaza/magento-2-social-login)
-
-☞ [Magento 2 SEO on Github](https://github.com/mageplaza/magento-2-seo)
-
-☞ [Magento 2 SMTP on Github](https://github.com/mageplaza/magento-2-smtp)
-
-☞ [Magento 2 Product Slider on Github](https://github.com/mageplaza/magento-2-product-slider)
-
-☞ [Magento 2 Banner on Github](https://github.com/mageplaza/magento-2-banner-slider)
+- [Layered Navigation](https://marketplace.magento.com/mageplaza-layered-navigation-m2.html)
+- [One Step Checkout](https://marketplace.magento.com/mageplaza-magento-2-one-step-checkout-extension.html)
+- [SMTP](https://marketplace.magento.com/mageplaza-module-smtp.html) ; [SMTP on Github](https://github.com/mageplaza/magento-2-smtp)
+- [Blog](https://github.com/mageplaza/magento-2-blog)
+- [Security](https://marketplace.magento.com/mageplaza-module-security.html)
+- [Social Login](https://github.com/mageplaza/magento-2-social-login)
+- [SEO](https://github.com/mageplaza/magento-2-seo) ; [SEO on Marketplace](https://marketplace.magento.com/mageplaza-magento-2-seo-extension.html)
+- [SMTP](https://github.com/mageplaza/magento-2-smtp)
+- [Product Slider](https://github.com/mageplaza/magento-2-product-slider)
+- [Banner](https://github.com/mageplaza/magento-2-banner-slider)
+- [Sample Payment Method](https://github.com/mageplaza/magento-2-sample-payment-method)
 
 
 
